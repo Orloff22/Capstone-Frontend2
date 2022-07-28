@@ -8,7 +8,7 @@ import { Employee } from './employee';
 })
 export class EmployeeService {
 
-  private baseURL = "http://localhost:8180/api/v1/employees";
+  private baseURL = "http://localhost:8180/springboot-backend/api/v1/employees";
 
   constructor(private httpClient: HttpClient) { }
   
