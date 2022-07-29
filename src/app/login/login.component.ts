@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       this.invalidLogin = false;
       this.loginSuccess = true; //EMIT
       this.successMessage = 'Login Successful.';
-      this.router.navigate(['/employees'])
+      this.router.navigate(['/home'])
     }, () => {
       this.invalidLogin = true;
       this.loginSuccess = false;
