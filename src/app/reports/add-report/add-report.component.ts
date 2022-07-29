@@ -2,13 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-add-report',
-  template: `
-    <p>
-      add-report works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './add-report.component.html',
+  styleUrls: ['./add-report.component.css']
 })
 export class AddReportComponent implements OnInit {
 

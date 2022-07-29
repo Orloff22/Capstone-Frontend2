@@ -1,49 +1,41 @@
+
 <h1>REPORTS</h1>
 <br>
+<button class="btn btn-success" type="submit" routerLink="/reports/add-report" routerLinkActive="active">ADD</button>
+<button class="btn btn-warning" type="submit" routerLink="/deactivate-report" routerLinkActive="active">DEACTIVATE</button>
 <div class="form-group pull-right">
-<input type="text" class="search form-control" placeholder="Report Name">
+  <input type="text" class="search form-control" placeholder="Report Name">
 </div>
 <br>
 <div class="form-group pull-right">
   <input type="text" class="search form-control" placeholder="Title Name">
 </div>
 <span class="counter pull-right"></span>
-<table class="table table-hover table-bordered results">
-<thead>
-  <tr>
-    <th style="width:2%;">#</th>
-    <th class="col-width">Report Name</th>
-    <th class="col-width">A S400</th>
-    <th class="col-width">Status</th>
-    <th class="col-width">Spool Report?</th>
-    <th class="col-width">Skip Pages</th>
-    <th class="col-width">Creation Date</th>
-    <th class="col-width">Report Definition</th>
-  </tr>
-  <tr class="warning no-result">
-    <td colspan="4"><i class="fa fa-warning"></i> No result</td>
-  </tr>
-</thead>
-<tbody>
-  <td>
-    <div class="checkbox">
-      <span class="choice-details">
-        <label class="checkbox-inline">
-          <input type="checkbox" value="" checked>
-        </label>
-      </span>
-    </div>
-  </td>
-  <td>BP TADs 0297</td>
-  <td>ANY</td>
-  <td>A</td>
-  <td>N</td>
-  <td>0</td>
-  <td>2006-06-22, 03,07:39</td>
-  <td><button class="btn btn-primary" type="submit">Button</button></td>
-</tbody>
-</table>
-   
-    <button class="btn btn-success" type="submit" routerLink="add-report" routerLinkActive="active">add</button>
- 
 
+<table class='table' *ngIf="reports.length">
+  <thead>
+    <tr>
+      <th style="width:2%;">#</th>
+      <th class="col-width">Report Name</th>
+      <th class="col-width">A S400</th>
+      <th class="col-width">Status</th>
+      <th class="col-width">Spool Report?</th>
+      <th class="col-width">Skip Pages</th>
+      <th class="col-width">Creation Date</th>
+      <th class="col-width">Report Definition</th>
+    </tr>
+    <tr class="warning no-result">
+      <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let report of reports'>
+      <td></td>
+      <td>{{report.reportName}}</td>
+      <td>{{report.as400Id}}</td>
+      <td>{{report.skipPages}}</td>
+      <td>{{report.creationDate}}</td>
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>

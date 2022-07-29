@@ -2,13 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-deactivate-report',
-  template: `
-    <p>
-      deactivate-report works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './deactivate-report.component.html',
+  styleUrls: ['./deactivate-report.component.css']
 })
 export class DeactivateReportComponent implements OnInit {
 
