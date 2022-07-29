@@ -1,5 +1,5 @@
 export interface IReports {
-    reportName: number;
+    reportName: string;
     as400Id:string;
     status: String;
     skipPages: number;

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddReportComponent } from './reports/add-report/add-report.component';
 import { AliasComponent } from './alias/alias.component';
 import { ConfigComponent } from './config/config.component';
-import { DeactivateReportComponent } from './reports/deactivate-report/deactivate-report.component';
+import { DeactivateReportComponent } from './deactivate-report/deactivate-report.component';
 import { DeleteLiveReportsComponent } from './delete-live-reports/delete-live-reports.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
